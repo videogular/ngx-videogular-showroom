@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { VgAPI } from 'videogular2/core';
+import { VgApiService } from '@videogular/ngx-videogular/core';
 
 export interface IMedia {
     title: string;
@@ -10,39 +10,43 @@ export interface IMedia {
 @Component({
     selector: 'app-smart-playlist',
     templateUrl: './smart-playlist.component.html',
-    styleUrls: [ './smart-playlist.component.css' ]
+    styleUrls: ['./smart-playlist.component.css'],
 })
 export class SmartPlaylistComponent {
     playlist: Array<IMedia> = [
         {
             title: 'Pale Blue Dot',
             src: 'http://static.videogular.com/assets/videos/videogular.mp4',
-            type: 'video/mp4'
+            type: 'video/mp4',
         },
         {
             title: 'Big Buck Bunny',
-            src: 'http://static.videogular.com/assets/videos/big_buck_bunny_720p_h264.mov',
-            type: 'video/mp4'
+            src:
+                'http://static.videogular.com/assets/videos/big_buck_bunny_720p_h264.mov',
+            type: 'video/mp4',
         },
         {
             title: 'Elephants Dream',
-            src: 'http://static.videogular.com/assets/videos/elephants-dream.mp4',
-            type: 'video/mp4'
-        }
+            src:
+                'http://static.videogular.com/assets/videos/elephants-dream.mp4',
+            type: 'video/mp4',
+        },
     ];
 
     currentIndex = 0;
-    currentItem: IMedia = this.playlist[ this.currentIndex ];
-    api: VgAPI;
+    currentItem: IMedia = this.playlist[this.currentIndex];
+    api: VgApiService;
 
-    constructor() {
-    }
-
-    onPlayerReady(api: VgAPI) {
+    onPlayerReady(api: VgApiService) {
         this.api = api;
 
-        this.api.getDefaultMedia().subscriptions.loadedMetadata.subscribe(this.playVideo.bind(this));
-        this.api.getDefaultMedia().subscriptions.ended.subscribe(this.nextVideo.bind(this));
+        this.api
+            .getDefaultMedia()
+            .subscriptions.loadedMetadata.subscribe(this.playVideo.bind(this));
+
+        this.api
+            .getDefaultMedia()
+            .subscriptions.ended.subscribe(this.nextVideo.bind(this));
     }
 
     nextVideo() {
@@ -52,7 +56,7 @@ export class SmartPlaylistComponent {
             this.currentIndex = 0;
         }
 
-        this.currentItem = this.playlist[ this.currentIndex ];
+        this.currentItem = this.playlist[this.currentIndex];
     }
 
     playVideo() {
