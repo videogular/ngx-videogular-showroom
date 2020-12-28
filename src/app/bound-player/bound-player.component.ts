@@ -1,19 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { VgAPI, VgFullscreenAPI } from 'videogular2/core';
+import { Component } from '@angular/core';
+import {VgApiService, VgFullscreenApiService} from '@videogular/ngx-videogular/core';
 
 @Component({
     selector: 'app-bound-player',
     templateUrl: './bound-player.component.html',
     styleUrls: [ './bound-player.component.css' ]
 })
-export class BoundPlayerComponent implements OnInit {
+export class BoundPlayerComponent {
     sources: Array<Object>;
     controls = false;
     autoplay = false;
     loop = false;
     preload = 'auto';
-    api: VgAPI;
-    fsAPI: VgFullscreenAPI;
+    api: VgApiService;
+    fsAPI: VgFullscreenApiService;
     nativeFs = true;
 
     constructor() {
@@ -33,7 +33,7 @@ export class BoundPlayerComponent implements OnInit {
         ];
     }
 
-    onPlayerReady(api: VgAPI) {
+    onPlayerReady(api: VgApiService) {
         this.api = api;
         this.fsAPI = this.api.fsAPI;
         this.nativeFs = this.fsAPI.nativeFullscreen;
@@ -62,9 +62,5 @@ export class BoundPlayerComponent implements OnInit {
                 type: 'video/ogg'
             }
         ];
-    }
-
-    ngOnInit() {
-
     }
 }

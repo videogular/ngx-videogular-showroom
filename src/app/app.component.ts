@@ -4,31 +4,31 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit, OnDestroy {
-  @HostBinding('class') isStandalone = '';
+    @HostBinding('class') isStandalone = '';
 
-  subscriptions: Subscription[] = [];
+    subscriptions: Subscription[] = [];
 
-  constructor(
-    private route: ActivatedRoute,
-    public angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics
-  ) {}
+    constructor(
+        private route: ActivatedRoute,
+        public angulartics2GoogleAnalytics: Angulartics2GoogleAnalytics
+    ) {}
 
-  ngOnInit() {
-    this.subscriptions.push(
-      this.route.queryParams.subscribe((params: any) => {
-        if (params.standalone === 'true') {
-          this.isStandalone = 'is-standalone';
-        }
-      })
-    );
-  }
+    ngOnInit() {
+        this.subscriptions.push(
+            this.route.queryParams.subscribe((params: any) => {
+                if (params.standalone === 'true') {
+                    this.isStandalone = 'is-standalone';
+                }
+            })
+        );
+    }
 
-  ngOnDestroy() {
-    this.subscriptions.forEach((s) => s.unsubscribe());
-  }
+    ngOnDestroy() {
+        this.subscriptions.forEach((s) => s.unsubscribe());
+    }
 }

@@ -7,7 +7,7 @@ import { VgControlsModule } from '@videogular/ngx-videogular/controls';
 import { VgCoreModule } from '@videogular/ngx-videogular/core';
 
 @NgModule({
-  imports: [CommonModule, VgCoreModule, VgControlsModule, VgBufferingModule],
-  declarations: [SmartPlaylistComponent],
+    imports: [CommonModule, VgCoreModule, VgControlsModule, VgBufferingModule],
+    declarations: [SmartPlaylistComponent],
 })
 export class SmartPlaylistModule {}

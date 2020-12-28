@@ -6,12 +6,13 @@ describe('SimplePlayerComponent', () => {
     let component: SimplePlayerComponent;
     let fixture: ComponentFixture<SimplePlayerComponent>;
 
-    beforeEach(waitForAsync(() => {
-        TestBed.configureTestingModule({
-            declarations: [ SimplePlayerComponent ]
+    beforeEach(
+        waitForAsync(() => {
+            TestBed.configureTestingModule({
+                declarations: [SimplePlayerComponent],
+            }).compileComponents();
         })
-            .compileComponents();
-    }));
+    );
 
     beforeEach(() => {
         fixture = TestBed.createComponent(SimplePlayerComponent);

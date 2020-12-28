@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CuePointsPlayerComponent } from './cue-points-player.component';
-import { VgCoreModule } from 'videogular2/core';
-import { VgOverlayPlayModule } from 'videogular2/overlay-play';
-import { VgControlsModule } from 'videogular2/controls';
 import { FormsModule } from '@angular/forms';
+import { VgControlsModule } from '@videogular/ngx-videogular/controls';
+import { VgCoreModule } from '@videogular/ngx-videogular/core';
+import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
 
 @NgModule({
     imports: [
@@ -12,9 +12,8 @@ import { FormsModule } from '@angular/forms';
         FormsModule,
         VgCoreModule,
         VgOverlayPlayModule,
-        VgControlsModule
+        VgControlsModule,
     ],
-    declarations: [ CuePointsPlayerComponent ]
+    declarations: [CuePointsPlayerComponent],
 })
-export class CuePointsPlayerModule {
-}
+export class CuePointsPlayerModule {}

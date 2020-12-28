@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
     selector: 'app-single-player',
@@ -6,8 +6,8 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
     styleUrls: [ './single-player.component.css' ],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SinglePlayerComponent implements OnInit {
-    sources: Array<Object>;
+export class SinglePlayerComponent {
+    sources: any[];
 
     constructor() {
         this.sources = [
@@ -24,8 +24,5 @@ export class SinglePlayerComponent implements OnInit {
                 type: 'video/webm'
             }
         ];
-    }
-
-    ngOnInit() {
     }
 }

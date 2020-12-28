@@ -26,5 +26,5 @@ export const ROUTES: Routes = [
     { path: 'custom-media', component: CustomMediaComponent },
     { path: 'smart-playlist', component: SmartPlaylistComponent },
 
-    { path: '**', component: SimplePlayerComponent }
+    { path: '**', component: SimplePlayerComponent },
 ];

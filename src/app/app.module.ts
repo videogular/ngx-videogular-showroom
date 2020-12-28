@@ -18,27 +18,27 @@ import { Angulartics2Module } from 'angulartics2';
 import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(ROUTES, {
-      useHash: true,
-      relativeLinkResolution: 'legacy',
-    }),
-    Angulartics2Module.forRoot([Angulartics2GoogleAnalytics]),
-    SimplePlayerModule,
-    SinglePlayerModule,
-    AudioPlayerModule,
-    BoundPlayerModule,
-    MultiplePlayersModule,
-    CuePointsPlayerModule,
-    GoogleImaPlayerModule,
-    MasterPlayerModule,
-    StreamingPlayerModule,
-    CustomMediaModule,
-    SmartPlaylistModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        RouterModule.forRoot(ROUTES, {
+            useHash: true,
+            relativeLinkResolution: 'legacy',
+        }),
+        Angulartics2Module.forRoot([Angulartics2GoogleAnalytics] as any),
+        SimplePlayerModule,
+        SinglePlayerModule,
+        AudioPlayerModule,
+        BoundPlayerModule,
+        MultiplePlayersModule,
+        CuePointsPlayerModule,
+        GoogleImaPlayerModule,
+        MasterPlayerModule,
+        StreamingPlayerModule,
+        CustomMediaModule,
+        SmartPlaylistModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}

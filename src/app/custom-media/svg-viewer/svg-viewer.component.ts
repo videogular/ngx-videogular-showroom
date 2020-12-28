@@ -1,16 +1,26 @@
-import { Component, OnInit, ElementRef, Input, SimpleChanges, OnDestroy } from '@angular/core';
-import { IPlayable, IMediaSubscriptions } from 'videogular2/src/core/vg-media/i-playable';
-import { VgStates, VgEvents, VgMediaElement } from 'videogular2/core';
-import { Subscription } from 'rxjs/Subscription';
-import { Observable } from 'rxjs/Observable';
-import { TimerObservable } from 'rxjs/observable/TimerObservable';
+import {
+    Component,
+    OnInit,
+    ElementRef,
+    Input,
+    SimpleChanges,
+    OnDestroy,
+} from '@angular/core';
+import {
+    VgMediaElement,
+    IPlayable,
+    VgStates,
+    IMediaSubscriptions,
+    VgEvents,
+} from '@videogular/ngx-videogular/core';
+import { Observable, Subscription, timer } from 'rxjs';
 
 export declare let Vivus;
 
 @Component({
     selector: 'app-svg-viewer',
     templateUrl: './svg-viewer.component.html',
-    styleUrls: [ './svg-viewer.component.css' ]
+    styleUrls: ['./svg-viewer.component.css'],
 })
 export class SvgViewerComponent extends VgMediaElement implements OnInit, OnDestroy, IPlayable {
     time: any = { current: 0, total: 0, left: 0 };
@@ -28,7 +38,7 @@ export class SvgViewerComponent extends VgMediaElement implements OnInit, OnDest
     @Input() src: string;
 
     vivus: any;
-    timer: Observable<number>;
+    timerObservable: Observable<number>;
     timerSubs: Subscription;
 
     constructor(private ref: ElementRef) {
@@ -39,15 +49,12 @@ export class SvgViewerComponent extends VgMediaElement implements OnInit, OnDest
     }
 
     ngOnInit() {
-        this.timer = TimerObservable.create(0, 10);
-        this.vivus = new Vivus(
-            'container',
-            {
-                duration: this.duration * 100,
-                file: this.src,
-                start: 'manual'
-            }
-        );
+        this.timerObservable = timer(0, 10);
+        this.vivus = new Vivus('container', {
+            duration: this.duration * 100,
+            file: this.src,
+            start: 'manual',
+        });
     }
 
     ngOnChanges(changes: SimpleChanges) {
@@ -59,11 +66,15 @@ export class SvgViewerComponent extends VgMediaElement implements OnInit, OnDest
             this.time.current = 0;
             this.time.total = this.duration;
             this.buffer.end = this.duration;
-            this.buffered.end = end => this.duration;
+            this.buffered.end = (end) => this.duration;
 
-            this.elem.dispatchEvent(new CustomEvent(VgEvents.VG_LOADED_METADATA));
+            this.elem.dispatchEvent(
+                new CustomEvent(VgEvents.VG_LOADED_METADATA)
+            );
             this.elem.dispatchEvent(new CustomEvent(VgEvents.VG_CAN_PLAY));
-            this.elem.dispatchEvent(new CustomEvent(VgEvents.VG_CAN_PLAY_THROUGH));
+            this.elem.dispatchEvent(
+                new CustomEvent(VgEvents.VG_CAN_PLAY_THROUGH)
+            );
         }
     }
 
@@ -92,7 +103,9 @@ export class SvgViewerComponent extends VgMediaElement implements OnInit, OnDest
 
         this.elem.dispatchEvent(new CustomEvent(VgEvents.VG_PLAY));
         this.elem.dispatchEvent(new CustomEvent(VgEvents.VG_PLAYING));
-        this.timerSubs = this.timer.subscribe(this.onProgress.bind(this));
+        this.timerSubs = this.timerObservable.subscribe(
+            this.onProgress.bind(this)
+        );
 
         return null;
     }
@@ -100,7 +113,7 @@ export class SvgViewerComponent extends VgMediaElement implements OnInit, OnDest
     set currentTime(seconds) {
         let vivusFrameProgress: number;
 
-        vivusFrameProgress = (seconds * 100 / this.duration) / 100;
+        vivusFrameProgress = (seconds * 100) / this.duration / 100;
 
         this.time.current = seconds;
         this.vivus.setFrameProgress(vivusFrameProgress);
