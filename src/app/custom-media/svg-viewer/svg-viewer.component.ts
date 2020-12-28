@@ -110,6 +110,7 @@ export class SvgViewerComponent extends VgMediaElement implements OnInit, OnDest
         return null;
     }
 
+    // @ts-ignore
     set currentTime(seconds) {
         let vivusFrameProgress: number;
 
@@ -120,6 +121,7 @@ export class SvgViewerComponent extends VgMediaElement implements OnInit, OnDest
         this.elem.dispatchEvent(new CustomEvent(VgEvents.VG_TIME_UPDATE));
     }
 
+    // @ts-ignore
     get currentTime() {
         return this.time.current;
     }
