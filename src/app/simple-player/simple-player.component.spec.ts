@@ -1,6 +1,6 @@
 /* tslint:disable:no-unused-variable */
-import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
-import { SimplePlayerComponent } from "./simple-player.component";
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { SimplePlayerComponent } from './simple-player.component';
 
 describe('SimplePlayerComponent', () => {
     let component: SimplePlayerComponent;

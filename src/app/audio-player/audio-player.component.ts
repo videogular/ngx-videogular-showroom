@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-audio-player',
@@ -11,8 +11,8 @@ export class AudioPlayerComponent implements OnInit {
     constructor() {
         this.sources = [
             {
-                src: "http://static.videogular.com/assets/audios/videogular.mp3",
-                type: "audio/mp3"
+                src: 'http://static.videogular.com/assets/audios/videogular.mp3',
+                type: 'audio/mp3'
             }
         ];
     }

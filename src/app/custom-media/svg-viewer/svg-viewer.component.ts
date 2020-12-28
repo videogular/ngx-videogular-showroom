@@ -15,12 +15,12 @@ export declare let Vivus;
 export class SvgViewerComponent extends VgMediaElement implements OnInit, OnDestroy, IPlayable {
     time: any = { current: 0, total: 0, left: 0 };
     buffer: any = { end: 0 };
-    canPlay: boolean = false;
-    canPlayThrough: boolean = false;
-    isMetadataLoaded: boolean = false;
-    isWaiting: boolean = false;
-    isCompleted: boolean = false;
-    isLive: boolean = false;
+    canPlay = false;
+    canPlayThrough = false;
+    isMetadataLoaded = false;
+    isWaiting = false;
+    isCompleted = false;
+    isLive = false;
     state: string = VgStates.VG_PAUSED;
     subscriptions: IMediaSubscriptions;
 
@@ -51,7 +51,7 @@ export class SvgViewerComponent extends VgMediaElement implements OnInit, OnDest
     }
 
     ngOnChanges(changes: SimpleChanges) {
-        if (changes['duration'].currentValue !== changes['duration'].previousValue) {
+        if (changes.duration.currentValue !== changes.duration.previousValue) {
             if (this.timerSubs) {
                 this.pause();
             }
@@ -98,7 +98,7 @@ export class SvgViewerComponent extends VgMediaElement implements OnInit, OnDest
     }
 
     set currentTime(seconds) {
-        let vivusFrameProgress:number;
+        let vivusFrameProgress: number;
 
         vivusFrameProgress = (seconds * 100 / this.duration) / 100;
 

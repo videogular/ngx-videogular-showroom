@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import { VgAPI, VgStates } from 'videogular2/core';
 import { IPlayable } from 'videogular2/src/core/vg-media/i-playable';
 
@@ -15,7 +15,7 @@ export interface ICamera {
     styleUrls: [ './master-player.component.css' ]
 })
 export class MasterPlayerComponent {
-    masterVideo: string = 'http://assets14.ign.com/videos/zencoder/2015/8/14/640/d9de372f3d373d06d4e770e73af44cb1-500000-1439510486-w.mp4';
+    masterVideo = 'http://assets14.ign.com/videos/zencoder/2015/8/14/640/d9de372f3d373d06d4e770e73af44cb1-500000-1439510486-w.mp4';
 
     selectedCamera: ICamera = { id: null } as ICamera;
     cameras: Array<ICamera> = [

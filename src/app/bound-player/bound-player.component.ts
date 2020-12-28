@@ -8,27 +8,27 @@ import { VgAPI, VgFullscreenAPI } from 'videogular2/core';
 })
 export class BoundPlayerComponent implements OnInit {
     sources: Array<Object>;
-    controls: boolean = false;
-    autoplay: boolean = false;
-    loop: boolean = false;
-    preload: string = 'auto';
+    controls = false;
+    autoplay = false;
+    loop = false;
+    preload = 'auto';
     api: VgAPI;
     fsAPI: VgFullscreenAPI;
-    nativeFs: boolean = true;
+    nativeFs = true;
 
     constructor() {
         this.sources = [
             {
-                src: "http://static.videogular.com/assets/videos/videogular.mp4",
-                type: "video/mp4"
+                src: 'http://static.videogular.com/assets/videos/videogular.mp4',
+                type: 'video/mp4'
             },
             {
-                src: "http://static.videogular.com/assets/videos/videogular.ogg",
-                type: "video/ogg"
+                src: 'http://static.videogular.com/assets/videos/videogular.ogg',
+                type: 'video/ogg'
             },
             {
-                src: "http://static.videogular.com/assets/videos/videogular.webm",
-                type: "video/webm"
+                src: 'http://static.videogular.com/assets/videos/videogular.webm',
+                type: 'video/webm'
             }
         ];
     }
@@ -54,12 +54,12 @@ export class BoundPlayerComponent implements OnInit {
     onClickUpdateSource() {
         this.sources = [
             {
-                src: "http://static.videogular.com/assets/videos/big_buck_bunny_720p_h264.mov",
-                type: "video/mp4"
+                src: 'http://static.videogular.com/assets/videos/big_buck_bunny_720p_h264.mov',
+                type: 'video/mp4'
             },
             {
-                src: "http://static.videogular.com/assets/videos/big_buck_bunny_720p_stereo.ogg",
-                type: "video/ogg"
+                src: 'http://static.videogular.com/assets/videos/big_buck_bunny_720p_stereo.ogg',
+                type: 'video/ogg'
             }
         ];
     }

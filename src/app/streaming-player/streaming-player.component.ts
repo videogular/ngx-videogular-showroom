@@ -94,7 +94,7 @@ export class StreamingPlayerComponent implements OnInit {
 
     const source = timer(1000, 2000);
 
-    let timerSubscription: Subscription = source.subscribe(() => {
+    const timerSubscription: Subscription = source.subscribe(() => {
       this.currentStream = stream;
 
       timerSubscription.unsubscribe();
