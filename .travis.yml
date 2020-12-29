@@ -28,11 +28,11 @@ script:
   - npm run test:ci
 
 after_success:
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash deploy.sh
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "main" && bash deploy.sh
 
 branches:
   only:
-    - master
+    - main
     - /^greenkeeper/.*$/
 
 env:
