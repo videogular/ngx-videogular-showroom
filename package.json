@@ -6,7 +6,7 @@
     "ng": "ng",
     "postinstall": "ngcc",
     "start": "ng serve --host 0.0.0.0",
-    "build": "ng build --prod --aot --base-href \"https://videogular.github.io/ngx-videogular/ngx-videogular-showroom/\"",
+    "build": "ng build --prod --aot --base-href \"https://videogular.github.io/ngx-videogular-showroom/\"",
     "test": "ng test",
     "test:ci": "echo \"M'name chef\"",
     "lint": "ng lint",
