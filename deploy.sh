@@ -10,7 +10,7 @@ fi
 
 rev=$(git rev-parse --short HEAD)
 
-cd dist
+cd dist/ngx-videogular-showroom
 
 git init
 git config user.name "Jaime Oliveira"
