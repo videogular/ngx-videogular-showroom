@@ -2,23 +2,20 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "rootDir": ".",
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
+    "emitDecoratorMetadata": false,
     "experimentalDecorators": true,
     "downlevelIteration": true,
-    "skipLibCheck": true,
-    "importHelpers": true,
+    "skipLibCheck": false,
+    "declaration": false,
     "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
     "target": "es2015",
     "module": "es2020",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "importHelpers": true,
     "lib": [
       "es2018",
       "dom"
