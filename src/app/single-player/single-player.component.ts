@@ -12,15 +12,15 @@ export class SinglePlayerComponent {
     constructor() {
         this.sources = [
             {
-                src: 'static.videogular.com/assets/videos/videogular.mp4',
+                src: 'https://static.videogular.com/assets/videos/videogular.mp4',
                 type: 'video/mp4'
             },
             {
-                src: 'static.videogular.com/assets/videos/videogular.ogg',
+                src: 'https://static.videogular.com/assets/videos/videogular.ogg',
                 type: 'video/ogg'
             },
             {
-                src: 'static.videogular.com/assets/videos/videogular.webm',
+                src: 'https://static.videogular.com/assets/videos/videogular.webm',
                 type: 'video/webm'
             }
         ];
