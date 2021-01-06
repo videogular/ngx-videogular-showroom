@@ -14,8 +14,10 @@
     cursor: pointer;
     z-index: 1000;
     font-family: sans-serif;
-    top: 10px;
-    left: 10px;
+    min-width: 200px;
+    bottom: 80px;
+    right: 0;
+    text-align: center;
     background-color: black;
     padding: 10px;
 }
