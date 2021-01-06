@@ -26,7 +26,7 @@
     </vg-controls>
 
     <video #media [vgMedia]="media" id="singleVideo" preload="auto" crossorigin>
-        <source *ngFor="let video of sources" [src]="video.src" [type]="video.type">
+        <source *ngFor="let video of sources" src="{{video.src}}" type="{{video.type}}">
         <track kind="subtitles" label="English" src="assets/subs/pale-blue-dot.vtt" srclang="en" default>
         <track kind="subtitles" label="Español" src="assets/subs/pale-blue-dot-es.vtt" srclang="es">
     </video>
