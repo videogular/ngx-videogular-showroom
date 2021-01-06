@@ -18,7 +18,7 @@
         <vg-fullscreen></vg-fullscreen>
     </vg-controls>
 
-    <audio #media [vgMedia]="media" id="myAudio" preload="auto">
+    <audio #media [vgMedia]="media" id="myAudio" preload="auto" crossorigin>
         <source *ngFor="let audio of sources" [src]="audio.src" [type]="audio.type">
     </audio>
 </vg-player>

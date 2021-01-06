@@ -7,7 +7,7 @@ import {VgApiService, VgFullscreenApiService} from '@videogular/ngx-videogular/c
     styleUrls: [ './bound-player.component.css' ]
 })
 export class BoundPlayerComponent {
-    sources: Array<Object>;
+    sources: any[];
     controls = false;
     autoplay = false;
     loop = false;

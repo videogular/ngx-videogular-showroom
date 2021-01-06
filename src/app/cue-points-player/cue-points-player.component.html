@@ -95,7 +95,7 @@
         <vg-fullscreen></vg-fullscreen>
     </vg-controls>
 
-    <video #media [vgMedia]="media" id="singleVideo" preload="auto">
+    <video #media [vgMedia]="media" id="singleVideo" preload="auto" crossorigin>
         <source *ngFor="let video of sources" [src]="video.src" [type]="video.type">
 
         <track src="assets/data/cue-points.vtt" kind="metadata" label="Cue Points" default

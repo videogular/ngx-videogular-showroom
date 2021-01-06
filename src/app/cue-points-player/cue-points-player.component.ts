@@ -27,7 +27,7 @@ export interface IWikiCue {
     styleUrls: ['./cue-points-player.component.css'],
 })
 export class CuePointsPlayerComponent implements OnInit {
-    sources: Array<Object>;
+    sources: any[];
     activeCuePoints: ICuePoint[] = [];
     api: VgApiService;
     track: TextTrack;

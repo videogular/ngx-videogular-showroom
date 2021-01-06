@@ -12,7 +12,7 @@ export class AudioPlayerComponent {
         this.sources = [
             {
                 src:
-                    'http://static.videogular.com/assets/audios/videogular.mp3',
+                    'https://cors-anywhere.herokuapp.com/http://static.videogular.com/assets/audios/videogular.mp3',
                 type: 'audio/mp3',
             },
         ];
