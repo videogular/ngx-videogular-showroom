@@ -49,17 +49,17 @@ export class CuePointsPlayerComponent implements OnInit {
         this.sources = [
             {
                 src:
-                    'http://static.videogular.com/assets/videos/videogular.mp4',
+                    'https://cors-anywhere.herokuapp.com/http://static.videogular.com/assets/videos/videogular.mp4',
                 type: 'video/mp4',
             },
             {
                 src:
-                    'http://static.videogular.com/assets/videos/videogular.ogg',
+                    'https://cors-anywhere.herokuapp.com/http://static.videogular.com/assets/videos/videogular.ogg',
                 type: 'video/ogg',
             },
             {
                 src:
-                    'http://static.videogular.com/assets/videos/videogular.webm',
+                    'https://cors-anywhere.herokuapp.com/http://static.videogular.com/assets/videos/videogular.webm',
                 type: 'video/webm',
             },
         ];

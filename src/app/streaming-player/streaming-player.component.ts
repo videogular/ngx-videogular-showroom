@@ -36,7 +36,7 @@ export class StreamingPlayerComponent implements OnInit {
         {
             type: 'vod',
             label: 'VOD',
-            source: 'http://static.videogular.com/assets/videos/videogular.mp4',
+            source: 'https://cors-anywhere.herokuapp.com/http://static.videogular.com/assets/videos/videogular.mp4',
         },
         {
             type: 'dash',

@@ -19,15 +19,15 @@ export class BoundPlayerComponent {
     constructor() {
         this.sources = [
             {
-                src: 'http://static.videogular.com/assets/videos/videogular.mp4',
+                src: 'https://cors-anywhere.herokuapp.com/http://static.videogular.com/assets/videos/videogular.mp4',
                 type: 'video/mp4'
             },
             {
-                src: 'http://static.videogular.com/assets/videos/videogular.ogg',
+                src: 'https://cors-anywhere.herokuapp.com/http://static.videogular.com/assets/videos/videogular.ogg',
                 type: 'video/ogg'
             },
             {
-                src: 'http://static.videogular.com/assets/videos/videogular.webm',
+                src: 'https://cors-anywhere.herokuapp.com/http://static.videogular.com/assets/videos/videogular.webm',
                 type: 'video/webm'
             }
         ];
@@ -54,11 +54,11 @@ export class BoundPlayerComponent {
     onClickUpdateSource() {
         this.sources = [
             {
-                src: 'http://static.videogular.com/assets/videos/big_buck_bunny_720p_h264.mov',
+                src: 'https://cors-anywhere.herokuapp.com/http://static.videogular.com/assets/videos/big_buck_bunny_720p_h264.mov',
                 type: 'video/mp4'
             },
             {
-                src: 'http://static.videogular.com/assets/videos/big_buck_bunny_720p_stereo.ogg',
+                src: 'https://cors-anywhere.herokuapp.com/http://static.videogular.com/assets/videos/big_buck_bunny_720p_stereo.ogg',
                 type: 'video/ogg'
             }
         ];
