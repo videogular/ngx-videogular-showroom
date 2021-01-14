@@ -1,4 +1,7 @@
-<br>
+<vg-modulo
+    #waveCanvas
+    [audioElement]="media"
+    [moduloConfig]="moduloConfig"></vg-modulo>
 
 <vg-player style="height: 50px;">
     <vg-controls>
@@ -20,7 +23,7 @@
         <vg-fullscreen></vg-fullscreen>
     </vg-controls>
 
-    <audio #media [vgMedia]="media" id="myAudio" preload="auto" crossorigin>
+    <audio #media [vgMedia]="media" id="myAudio" preload="auto" crossorigin (play)="waveCanvas.startVisualizer()">
         <source *ngFor="let audio of sources" [src]="audio.src" [type]="audio.type">
     </audio>
 </vg-player>

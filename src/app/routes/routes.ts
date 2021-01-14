@@ -10,6 +10,7 @@ import { StreamingPlayerComponent } from '../streaming-player/streaming-player.c
 import { MultiplePlayersComponent } from '../multiple-players/multiple-players.component';
 import { CustomMediaComponent } from '../custom-media/custom-media.component';
 import { SmartPlaylistComponent } from '../smart-playlist/smart-playlist.component';
+import { AudioVisualizerComponent } from '../audio-visualizer/audio-visualizer.component';
 
 export const ROUTES: Routes = [
     { path: '', component: SimplePlayerComponent },
@@ -17,6 +18,7 @@ export const ROUTES: Routes = [
     { path: 'simple-player', component: SimplePlayerComponent },
     { path: 'single-player', component: SinglePlayerComponent },
     { path: 'audio-player', component: AudioPlayerComponent },
+    { path: 'audio-visualizer', component: AudioVisualizerComponent },
     { path: 'bound-player', component: BoundPlayerComponent },
     { path: 'multiple-players', component: MultiplePlayersComponent },
     { path: 'cue-points-player', component: CuePointsPlayerComponent },

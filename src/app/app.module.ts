@@ -16,6 +16,7 @@ import { CustomMediaModule } from './custom-media/custom-media.module';
 import { SmartPlaylistModule } from './smart-playlist/smart-playlist.module';
 import { Angulartics2Module } from 'angulartics2';
 import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
+import { AudioVisualizerModule } from './audio-visualizer/audio-visualizer.module';
 
 @NgModule({
     declarations: [AppComponent],
@@ -37,6 +38,7 @@ import { Angulartics2GoogleAnalytics } from 'angulartics2/ga';
         StreamingPlayerModule,
         CustomMediaModule,
         SmartPlaylistModule,
+        AudioVisualizerModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

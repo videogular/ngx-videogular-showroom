@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AudioPlayerComponent } from './audio-player.component';
 import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 import { VgControlsModule } from '@videogular/ngx-videogular/controls';
 import { VgCoreModule } from '@videogular/ngx-videogular/core';
 import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
+import { VgModuloModule } from '@videogular/ngx-videogular/modulo';
+import { AudioVisualizerComponent } from './audio-visualizer.component';
 
 @NgModule({
     imports: [
@@ -12,8 +13,9 @@ import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
         VgCoreModule,
         VgControlsModule,
         VgOverlayPlayModule,
-        VgBufferingModule
+        VgBufferingModule,
+        VgModuloModule,
     ],
-    declarations: [AudioPlayerComponent],
+    declarations: [AudioVisualizerComponent],
 })
-export class AudioPlayerModule {}
+export class AudioVisualizerModule {}
