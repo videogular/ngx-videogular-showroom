@@ -17,15 +17,5 @@ export class AudioVisualizerComponent {
         scaleFactor: 0.8,
     };
 
-    // sources = [
-    //     {
-    //         src: 'https://cors-anywhere.herokuapp.com/http://static.videogular.com/assets/audios/videogular.mp3',
-    //         type: 'audio/mp3',
-    //     },
-    // ];
-
-    // // 'https://cors-anywhere.herokuapp.com/http://static.videogular.com/assets/audios/videogular.mp3',
-    // // 'http://static.videogular.com/assets/audios/videogular.mp3',
-
     @ViewChild('media', { static: false }) media: ElementRef<HTMLAudioElement>;
 }
