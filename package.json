@@ -6,7 +6,7 @@
     "ng": "ng",
     "postinstall": "ngcc",
     "start": "ng serve --host 0.0.0.0",
-    "build": "ng build --prod --aot --base-href \"https://videogular.github.io/ngx-videogular-showroom/\"",
+    "build": "ng build --configuration production --aot --base-href \"https://videogular.github.io/ngx-videogular-showroom/\"",
     "test": "ng test",
     "test:ci": "echo \"M'name chef\"",
     "lint": "ng lint",
@@ -18,14 +18,14 @@
   },
   "private": false,
   "dependencies": {
-    "@angular/animations": "~11.0.1",
-    "@angular/common": "~11.0.1",
-    "@angular/compiler": "~11.0.1",
-    "@angular/core": "~11.0.1",
-    "@angular/forms": "~11.0.1",
-    "@angular/platform-browser": "~11.0.1",
-    "@angular/platform-browser-dynamic": "~11.0.1",
-    "@angular/router": "~11.0.1",
+    "@angular/animations": "~12.1.1",
+    "@angular/common": "~12.1.1",
+    "@angular/compiler": "~12.1.1",
+    "@angular/core": "~12.1.1",
+    "@angular/forms": "~12.1.1",
+    "@angular/platform-browser": "~12.1.1",
+    "@angular/platform-browser-dynamic": "~12.1.1",
+    "@angular/router": "~12.1.1",
     "@videogular/ngx-videogular": "^3.0.1",
     "angulartics2": "^10.0.0",
     "dashjs": "^3.2.0",
@@ -33,18 +33,18 @@
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "vivus": "^0.4.5",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1100.2",
-    "@angular/cli": "~11.0.2",
-    "@angular/compiler-cli": "~11.0.1",
+    "@angular-devkit/build-angular": "~12.1.0",
+    "@angular/cli": "~12.1.0",
+    "@angular/compiler-cli": "~12.1.1",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~5.1.0",
+    "karma": "~6.3.4",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
     "karma-firefox-launcher": "^2.1.0",
@@ -53,6 +53,6 @@
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~4.0.2"
+    "typescript": "~4.3.5"
   }
 }

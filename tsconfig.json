@@ -5,7 +5,6 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "moduleResolution": "node",
-    "emitDecoratorMetadata": false,
     "experimentalDecorators": true,
     "downlevelIteration": true,
     "skipLibCheck": false,
