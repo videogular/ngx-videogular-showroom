@@ -7,7 +7,7 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "downlevelIteration": true,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "declaration": false,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
